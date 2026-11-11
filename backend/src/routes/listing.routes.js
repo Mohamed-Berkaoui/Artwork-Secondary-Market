@@ -53,8 +53,8 @@ listingRouter.delete('/:id',asyncHandler(verifyToken),asyncHandler(deleteListing
  * @description admin routes
  */
 
-listingRouter.get('/admin',asyncHandler(verifyToken),asyncHandler(verifyAdmin),asyncHandler(getPendingListings))
 
+listingRouter.get('/admin/getpending',asyncHandler(verifyToken),asyncHandler(verifyAdmin),asyncHandler(getPendingListings))
 
 listingRouter.patch('/admin/:id',asyncHandler(verifyToken),asyncHandler(verifyAdmin),asyncHandler(updateListingsStatus))
 

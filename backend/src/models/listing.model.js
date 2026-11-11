@@ -12,13 +12,14 @@ const listingSchema = new mongoose.Schema(
       required: true,
     },
     description: { type: String },
-    price: { type: Number, required: true, min: 1 },
+    price: { type: Number, required: true, min: 1 },//500
     images: [{ type: String }],
     status: {
       type: String,
       enum: ["pending", "live", "sold", "deleted"],
       default: "pending",
     },
+   
   },
   { versionKey: false, timestamps: true },
 );

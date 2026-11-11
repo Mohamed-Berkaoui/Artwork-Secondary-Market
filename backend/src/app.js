@@ -1,6 +1,7 @@
 const express=require('express')
 const userRouter = require("./routes/user.routes")
 const listingRouter = require('./routes/listing.routes')
+const offerRouter = require('./routes/offer.routes')
 
 
 
@@ -11,6 +12,7 @@ app.use('/api/v1/user',userRouter)
 
 app.use('/api/v1/listing',listingRouter)
 
+app.use("/api/v1/offer",offerRouter)
 
 module.exports=app
 
